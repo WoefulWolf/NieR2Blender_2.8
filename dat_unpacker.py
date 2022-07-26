@@ -104,7 +104,7 @@ def extract_hashes(fp, extract_dir, FileCount, hashMapOffset, fileNamesOffset):
 
 	# Extraction
 	filename = 'file_order.metadata'
-	extract_dir_sub = extract_dir + '\\' + filename
+	extract_dir_sub = extract_dir + '/' + filename
 	outfile = open(extract_dir_sub,'wb')
 
 	# Header
@@ -145,7 +145,7 @@ def extract_hashes(fp, extract_dir, FileCount, hashMapOffset, fileNamesOffset):
  
 	# Extraction
 	filename = 'hash_data.metadata'
-	extract_dir_sub = extract_dir + '\\' + filename
+	extract_dir_sub = extract_dir + '/' + filename
 	outfile = open(extract_dir_sub,'wb')
 
 		# Header
@@ -181,7 +181,7 @@ def main(filename, extract_dir, ROOT_DIR):
 			extract_dir_sub = ''
 			index,Filename,FileOffset,Size,Extension = get_fileinfo(fp, i, FileTableOffset,ExtensionTableOffset, NameTableOffset,SizeTableOffset)
 			if extract_dir != '':
-				extract_dir_sub = extract_dir + '\\' + filename.replace(ROOT_DIR ,'') 
+				extract_dir_sub = extract_dir + '/' + filename.replace(ROOT_DIR ,'') 
 				extract_file(fp, Filename, FileOffset, Size, extract_dir_sub)
         
 		extract_hashes(fp, extract_dir, FileCount, hashMapOffset, NameTableOffset)
@@ -212,5 +212,5 @@ if __name__ == '__main__':
 	ROOT_DIR = dir_name
 	for dirpath,dirnames,filename in os.walk(dir_name):
 		for file in filename:
-			filename = "%s\%s"%(dirpath,file)
+			filename = "%s/%s"%(dirpath,file)
 			main(filename, extract_dir, ROOT_DIR)

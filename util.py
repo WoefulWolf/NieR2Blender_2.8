@@ -25,7 +25,7 @@ def find_files(dir_name,ext):
 	filenameArray = []
 	for dirpath,dirnames,filename in os.walk(dir_name):
 		for file in filename:
-			filename = "%s\%s"%(dirpath,file)
+			filename = "%s/%s"%(dirpath,file)
 			#print(filename)
 			if filename.find(ext) > -1:
 				filenameArray.append(filename)
