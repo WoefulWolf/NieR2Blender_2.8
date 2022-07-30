@@ -1,3 +1,6 @@
+# THIS HAS BEEN REPLACED AND WON'T BE UPDATED ANYMORE
+Please see https://github.com/WoefulWolf/NieR2Blender2NieR
+
 ![Nier2Blender](https://user-images.githubusercontent.com/54476280/64488614-519a7280-d24a-11e9-8627-784cdc5ac3de.png)
 <br>
 
